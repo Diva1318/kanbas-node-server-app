@@ -49,7 +49,7 @@ export default async function UserRoutes(app) {
   // app.post("/api/users/profile", profile);
 
   const profile = async (req, res) => {
-    let currentUser = req.session["currentUser"];
+    const currentUser = req.session["currentUser"];
     if (!currentUser) {
       res.sendStatus(401);
       return;
